@@ -1,0 +1,6 @@
+/* pages/关于我们/关于我们.wxss */
+/* pages/aboutus/aboutus.wxss */
+.view_logo{text-align: center; }
+.imagelogo{width:  80px; height: 80px; }
+.text_atitle{font-size: 16px; font-weight: 600; }
+.view_section{padding: 20px 20px 0px; padding-top: 20px; }

@@ -1,0 +1,6 @@
+/* pages/已预约的餐厅/已预约的餐厅.wxss */
+.view_logo{text-align: center; }
+.imagelogo{width:  80px; height: 80px; }
+.text_atitle{font-size: 26px; font-weight: 600; }
+.view_section{padding: 20px 20px 0px; padding-top: 20px; text-align: center;}
+.text_middescrip{font-size: 18px;font-weight:  bold; color: #4c4040;  }

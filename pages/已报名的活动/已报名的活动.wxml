@@ -1,0 +1,22 @@
+<!--pages/已报名的活动/已报名的活动.wxml-->
+<view style="margin-top: 10px;margin-left: 32px" bindtap='headbartap'>
+<text style="display:block; font-size: 23px;font-weight: bolder;margin: 10px 0 4px 0;color: #ff7640 ">我报名的活动</text>
+</view>
+
+<scroll-view class="list" style="height: 100%; width: 100%;" scroll-y="true"  lower-threshold="800">
+  <block wx:for="{{hdData}}"wx:key="id">
+    <view class="m-trip">             
+    <image class="cover" src="/image/logo.png" mode="aspectFill"></image>
+    <view class="info">
+      <text class="h2">{{item.index}}门票</text>
+      <text class="h3">姓名：{{item.Name}}</text>
+      <text class="h3">编号：{{item.id}}</text>
+      
+    </view>
+  </view>
+  </block>
+</scroll-view>
+
+<view wx:if="{{hasMore}}" class="loadmore loading">正在加载...</view>
+<view wx:else class="loadmore">没有更多已报名的活动啦</view>
+

@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/user/user",
+    "pages/food/food",
+    "pages/bbs/bbs",
+    "pages/bbscreate/bbscreate",
+    "pages/bbsDetail/bbsDetail",
+    "pages/bbscomment/bbscomment",
+    "pages/allist/allist",
+    "pages/cssalist/cssalist",
+    "pages/cellist/cellist",
+    "pages/buslist/buslist",
+    "pages/content/content",
+    "pages/question/question",
+    "pages/baoming/baoming",
+    "pages/reserve/reserve",
+    "pages/关于我们/关于我们",
+    "pages/客服/客服",
+    "pages/我的会员卡/我的会员卡",
+    "pages/已报名的活动/已报名的活动",
+    "pages/已预约的餐厅/已预约的餐厅",
+    "pages/我发布的帖子/我发布的帖子",
+    "pages/新生手册/新生手册",
+    "pages/使用说明/使用说明",
+    "pages/客服说明/客服说明",
+    "pages/建议及反馈/建议及反馈"
+      
+  ],
+
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "PSU CSSA",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  },
+
+  "tabBar": {
+    "color": "#b7b7b7",
+    "selectedColor": "#444",
+    "borderStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home_fill.png",
+        "text": "主页"
+      },
+
+      {
+        "pagePath": "pages/food/food",
+        "iconPath": "image/food.png",
+        "selectedIconPath": "image/foodfill.png",
+        "text": "美食"
+      },
+      
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "image/user.png",
+        "selectedIconPath": "image/user_fill.png",
+        "text": "个人"
+      }
+
+    ]
+  }
+  
+}

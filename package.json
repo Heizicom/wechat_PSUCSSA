@@ -1,0 +1,21 @@
+{
+  "name": "PSU CSSA ",
+  "version": "1.0.0",
+  "description": "PSU CSSA",
+  "main": "app.js",
+  "dependencies": {
+    "uuid": "3.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "baas",
+    "hydrogen",
+    "hello-world",
+    "demo"
+  ],
+  "author": "Rongshi Wang",
+  "license": "ISC"
+}

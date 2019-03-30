@@ -1,0 +1,65 @@
+<!--pages/建议及反馈/建议及反馈.wxml-->
+<import src="/utils/foot.wxml" />
+
+<view class="index">
+  <view class="index-profile">
+    <open-data type="userAvatarUrl" class="index-profile__img"></open-data>
+  </view>
+  <view class="index-title">
+    {{ title }}
+  </view>
+  <view class="index-books">
+    <view class="sectext">
+    <text>微信号</text>
+    </view>
+    <view class="index-books__input">
+      <input
+        type="text"
+        placeholder=""
+        value="{{ createNameValue }}"
+        confirm-type="完成"
+        bindinput="bindCreateNameInput"
+      />
+    </view>
+    <view class="sectext">
+    <text>年级</text>
+    </view>
+    <view class="index-books__input">
+      <input
+        type="text"
+        placeholder=""
+        value="{{ createAgeValue }}"
+        confirm-type="完成"
+        bindinput="bindCreateAgeInput"
+      />
+    </view>
+    <view class="sectext">
+    <text>建议及反馈</text>
+    </view>
+    <view class="index-books__input2">
+      <input 
+        type="text"
+        placeholder=""
+        value="{{ createcommentValue }}"
+        confirm-type="完成"
+        bindinput="bindCreatecommentInput"
+        auto-height
+      />
+    </view>
+
+    
+
+    <view class="index-books__controls">
+      <button
+        class="index-books__controls--create"
+        bindtap="createBook"
+        type="primary"
+      >
+        提交
+      </button>
+    </view>
+  </view>
+
+<template is="foot" />
+
+</view>

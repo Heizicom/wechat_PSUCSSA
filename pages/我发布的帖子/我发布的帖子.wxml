@@ -1,0 +1,45 @@
+<!--pages/我发布的帖子/我发布的帖子.wxml-->
+
+
+<scroll-view scroll-y="true" class="container" upper-threshold="10" lower-threshold="5" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+<view class="title">
+    {{ title }}
+</view>
+
+    <block wx:for="{{bbsData}}" wx:key="{{item.id}}">
+        <view class="feed-item">
+          
+            
+            <view class="feed-content"> 
+                <view class="question" qid="{{question_id}}">
+                <navigator class="item" url='/pages/bbsDetail/bbsDetail?recordID={{item.id}}' open-type='navigate' hover-class='none'> 
+                    <a class="question-link">
+                        <text>{{item.title}}</text>
+                    </a>
+                     </navigator>
+                </view>
+                <view class="answer-body">                
+                        <text class="answer-txt" aid="{{answer_id}}">{{item.content}}</text>                      
+                    
+                 </view>   
+                    <view class="answer-actions">
+                        <view class="like dot">
+                            <a>分类： {{category[item.Index]}}  </a>
+                            <button class="delbtn" plain='true' type='warn' size='mini' bindtap='delbbs' data-recordid='{{item.id}}'>删除</button>
+                        </view>
+                        <!--view class="comments dot">
+                            <a>{{item.comment_num}} 评论 </a>
+                        </view>
+                        <view class="follow-it">
+                            <a>关注问题</a>
+                        </view-->
+                    </view>
+                
+            </view>
+         
+        </view>
+    </block>
+    <view wx:if="{{hasMore}}" class="loadmore loading">正在加载...</view>
+<view wx:else class="loadmore">没有更多已发布的帖子啦</view>
+</scroll-view>

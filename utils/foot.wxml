@@ -1,0 +1,6 @@
+<template name="foot">
+  <navigator class="page-foot" openType="switchTab" url="/pages/home/home" hover-class="none">
+    <text class="page-foot">宾州州立大学CSSA 网络部</text>
+    <view><text class="page-foot">Copy rights PSU CSSA 2018. All rights reserved</text></view>   
+  </navigator>
+</template>

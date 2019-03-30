@@ -1,0 +1,31 @@
+<!--pages/cellist/cellist.wxml-->
+<!--include src="/utils/search-bar.wxml"/-->
+<import src="/utils/foot.wxml" />
+
+<view class="cellist">
+<scroll-view class="list" style="height: 100%; width: 100%;" scroll-y="true"  lower-threshold="800">
+  <block wx:for="{{ name }}"wx:key="id">
+    <view class="m-trip">
+  <navigator class="item" url='/pages/content/content?richTextID={{iList[index]}}' open-type='navigate' hover-class='none'>              
+    <image class="cover" src="/image/header001.png" mode="aspectFill"></image>
+    <view class="info">
+      <text class="h2">{{name[index]}}</text>
+      <view class="user">
+        <image class="avatar" src="/image/logo.png"></image>
+        <view class="name">by PSU CSSA</view>
+      </view>
+      <!--view class="bottom" wx:if="{{ mode === 2 }}">{{ trip.view_count }}次浏览 / {{ trip.liked_count }}喜欢 / {{ trip.total_comments_count }}评论</view-->
+    </view>
+    </navigator>
+  </view>
+  </block>
+</scroll-view>
+</view>
+
+
+<view class='foot'>
+<template is="foot" />
+</view>
+ 
+
+

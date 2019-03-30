@@ -1,0 +1,79 @@
+<import src="/utils/foot.wxml" />
+
+<view class="viewsec" >
+<view style="margin-bottom: 32px;margin-left: 32px">
+  <text style="display:block; font-size: 28px;font-weight: bold;margin: 32px 0 4px 0;color: #ff7640">宾州州立生活助手</text>
+  <text style="display:block; font-size:20px;font-weight:light;color: rgba(240,77,69, .8)">Penn State CSSA</text>
+  </view>
+
+    <swiper class="wx-swiper" indicator-dots="True"  autoplay="true"  indicator-color="#bcc0c9" indicator-active-color="#3a4861">
+    <swiper-item class="wx-swiper-item" wx:for="{{iList0}}"wx:key="id">
+            <navigator class="wx-navigator_item item1" hover-class="navigator-hover" url='../baoming/baoming?richTextID={{rcdList[index]}}'>
+            <image src='{{item}}' mode="aspectFill"/>
+            </navigator>
+        </swiper-item>
+    <swiper-item class="wx-swiper-item" wx:for="{{iList}}"wx:key="id">
+            <navigator class="wx-navigator_item item1" hover-class="navigator-hover" url='../content/content?richTextID={{name[index]}}'>
+            <image src='{{item}}' mode="aspectFill"/>
+            </navigator>
+        </swiper-item>
+        
+    </swiper>
+</view>
+
+<!--view class="links">
+  <navigator url="/pages/list/list?type=recommend">
+    <image src="/image/link-01.png"/>
+  </navigator>
+  <navigator url="/pages/view/view">
+    <image src="/image/link-02.png"/>
+  </navigator>
+</view-->
+
+<view class="grids">
+  <navigator class="item" wx:for="{{categories}}" wx:key="id" url='/pages/allist/allist?recordID={{ item.id }}&index={{ index }}&home=true' open-type='navigate' hover-class='none'>
+          <image src='{{item.icon}}'></image>
+          <text>{{item.text}}</text>
+        </navigator>
+  <navigator class="item" wx:for="{{categories2}}" wx:key="id" url='/pages/cssalist/cssalist?recordID={{ item.id }}&index={{ index }}&home=true' open-type='navigate' hover-class='none'>
+
+          <image src='{{item.icon}}'></image>
+          <text>{{item.text}}</text>
+        </navigator>
+  <navigator class="item" wx:for="{{categories3}}" wx:key="id" url='/pages/cellist/cellist?recordID={{ item.id }}&index={{ index }}&home=true' open-type='navigate' hover-class='none'>
+
+          <image class="icon"src='{{item.icon}}'></image>
+          <text>{{item.text}}</text>
+        </navigator>
+  <navigator class="item" wx:for="{{categories4}}" wx:key="id" url='/pages/buslist/buslist?recordID={{ item.id }}&index={{ index }}&home=true' open-type='navigate' hover-class='none'>
+
+          <image class="icon"src='{{item.icon}}'></image>
+          <text>{{item.text}}</text>
+        </navigator>
+  <!--navigator class="item" wx:for="{{categories5}}" wx:key="id" url='/pages/bbs/bbs?recordID={{ item.id }}&index={{ index }}&home=true' open-type='navigate' hover-class='none'>
+
+          <image class="icon"src='{{item.icon}}'></image>
+          <text>{{item.text}}</text>
+        </navigator-->
+  <navigator class="item" wx:for="{{categories6}}" wx:key="id" url='/pages/game/game?tableID={{ item.id }}&index={{ index }}&home=true' open-type='navigate' hover-class='none'>
+
+          <image class="icon"src='{{item.icon}}'></image>
+          <text>{{item.text}}</text>
+        </navigator>      
+  <navigator class="item" wx:for="{{categories7}}" wx:key="id" url='/pages/content/content?richTextID={{ item.id }}&index={{ index }}&home=true' open-type='navigate' hover-class='none'>
+
+          <image class="icon"src='{{item.icon}}'></image>
+          <text>{{item.text}}</text>
+        </navigator>
+  <!--navigator class="item" wx:for="{{categories8}}" wx:key="id" url='/pages/alumni/alumni?tableID={{ item.id }}&index={{ index }}&home=true' open-type='navigate' hover-class='none'>
+
+          <image class="icon"src='{{item.icon}}'></image>
+          <text>{{item.text}}</text>
+        </navigator-->
+
+</view>
+
+<view class='foot'>
+<template is="foot" />
+</view>
+ 

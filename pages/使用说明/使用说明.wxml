@@ -1,0 +1,29 @@
+<!--pages/新生手册/使用说明.wxml-->
+<import src="/utils/foot.wxml" />
+
+<view class="slide view_logo">
+    <image class="imagelogo" mode="scaleToFill" src="/image/logo.png" style="background-size:  100% 100%" />
+</view>
+<view class="slide view_section">
+      <text class="block text_atitle" >使用说明</text>
+        <text class="block text_atitle" > --------</text>
+      <text class="block text_aboutus">宾州州立生活助手小程序由CSSA网络部开发。面向广大PSU的华人师生和华人群体。以宣传CSSA的各项活动及服务广大华人为目标。通过微信小程序连接线上线下。</text>
+</view>
+<view class="slide view_section">
+      <text class="block text_atitle" >隐私说明</text>
+        <text class="block text_atitle" > --------</text>
+      <text class="block text_aboutus">宾州州立CSSA承诺将保护所用用户的隐私，不会使用任何用户隐私用于其他商业活动及用途。宾州州立CSSA对本小程序保留最终解释权。</text>
+</view>
+<view class="slide view_section">
+      <text class="block text_atitle">开发说明</text>
+        <text class="block text_atitle" > --------</text>
+        <text class="block text_aboutus" >开发者：CSSA网络部 Rongshi Wang</text>
+        <text class="block text_aboutus" >技术问题：web@psucssa.club</text>
+</view>
+<view class="slide view_section">
+      <text class="block text_atitle">Tips:</text>
+        <text class="block text_atitle" > --------</text>
+        <text class="block text_aboutus" >轻触页面最下方的"宾州州立大学CSSA 网络部" 可以返回至首页哟～</text>
+</view>
+<template is="foot" />
+

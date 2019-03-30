@@ -1,0 +1,31 @@
+<import src="../../wxParser/index.wxml"/>
+<import src="/utils/foot.wxml" />
+
+<view wx:if="{{ dataLoadFinish }}">
+  <view class="header">
+  <image style="width: 100%;" src="{{detail.cover}}" mode="aspectFill"></image>
+  <view class="title">
+    <view class="h1">{{detail.title}}</view>
+    
+    <view class="detail">by PSU CSSA</view>
+    <!--view class="detail">{{ info.visited_count }}去过  /  {{ info.wish_to_go_count }}喜欢</view-->
+  </view>
+  <view class="photo"></view>
+  <view class="mask"></view>
+</view>
+
+  <!--view class='title'>{{ detail.title }}</view-->
+
+
+<!--view style="margin-left: 32px">
+  <text style="display:block; font-size: 28px;font-weight: bold;margin: 12px 0 4px 0;color: #ff7640">{{detail.title}}</text>
+  </view-->
+
+  <view class="nav wxParser detail">
+    <template is="wxParser" data="{{wxParserData:richText.nodes}}"/>
+  </view>
+
+</view>
+<view class='foot'>
+<template is="foot" />
+</view>

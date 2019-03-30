@@ -1,0 +1,169 @@
+/* pages/food/food.wxss */
+@import "/utils/list/list.wxss";
+.cells {
+  background-color: #fff;
+}
+
+.cells .item {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1rpx solid #eee;
+}
+
+.cells .item image {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 45rpx;
+}
+
+.cells .item .meta {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin:48rpx 48rpx 48rpx 0;
+}
+
+.cells .item .meta .name {
+  color: #234;
+  font-size: 34rpx;
+  margin-bottom: 16rpx;
+}
+
+.cells .item .meta .phone,
+.cells .item .meta .address {
+  color: #678;
+  font-size: 27rpx;
+}
+
+.cells .item .meta .hours {
+  /*color: #ff69b4;*/
+  color: #456;
+  font-size: 27rpx;
+}
+
+.cells .item .score {
+  margin: 20rpx 20rpx 0 -40rpx;
+  padding: 0 10rpx;
+  background-color: #ee523d;
+  border-radius: 30rpx;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.loadmore {
+  color: #888;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.loadmore.loading::before {
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: -10rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+  vertical-align: middle;
+  animation: loading 1s steps(12) infinite;
+  background-size: 100%
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(-360deg)
+  }
+}
+.m-trip{
+  margin: 20rpx;
+}
+.trip-title{
+  margin-bottom: 10rpx;
+}
+
+.projectbox {
+  padding: 0rpx 50rpx;
+  position: relative;
+}
+
+.headingtext {
+  font-size: 40rpx;
+  color: #000;
+  margin-top: 50rpx;
+  display: block;
+  letter-spacing: 2rpx;
+  font-weight: 900;
+}
+
+.project {
+  width: 650rpx;
+  height: 200rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  /* box-shadow: 0px 2px 5px #dfdede; */
+  position: relative;
+  border-bottom: 2rpx dashed #efeff1;
+
+}
+
+.headimage {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-left: 0rpx;
+  margin-top: 15rpx;
+  /* border:1rpx solid #ffd92e; */
+}
+
+.projecttext {
+  position: absolute;
+  top: 15rpx;
+  left: 180rpx;
+  z-index: 0;
+}
+
+.biaoti {
+  font-size: 30rpx;
+  color: #000;
+  display: block;
+  font-weight: bold;
+}
+
+.jianjie {
+  font-size: 25rpx;
+  color: dimgray;
+  display: block;
+  margin-right: 110rpx;
+  padding-top: -5rpx;
+  line-height: 16px;
+}
+
+.field {
+  font-size: 25rpx;
+  color: dimgray;
+  display: block;
+  margin-top: 35rpx;
+  position: absolute;
+  top: 75rpx;
+  left: 0rpx;
+  z-index: 1;
+}
+
+ .openpush {
+  width: 0rpx;
+  height: 0rpx;
+  border-left: 35rpx solid #ff7640;
+  border-right: 20rpx solid transparent;
+  border-bottom: 20rpx solid transparent;
+  border-top: 20rpx solid transparent;
+  position: absolute;
+  top: 71rpx;
+  right: 0rpx;
+  z-index: 0;
+} 

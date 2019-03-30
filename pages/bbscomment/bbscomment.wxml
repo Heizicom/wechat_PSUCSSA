@@ -1,0 +1,50 @@
+<!--pages/bbscomment/bbscomment.wxml-->
+<scroll-view scroll-y="true" class="container" upper-threshold="10" lower-threshold="5" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+<view class="title">
+    {{ title }}
+</view>
+    <block wx:for="{{comment}}" wx:key="id">
+        <view class="feed-item">
+          
+            
+            <view class="feed-content"> 
+                <view class="question" qid="{{question_id}}">             
+                        <text>匿名用户{{detail.created_by}}</text>
+                </view>
+                <view class="answer-body">                
+                        <text class="answer-txt">{{item}}</text>               
+                 </view>               
+            </view>       
+        </view>
+    </block>
+</scroll-view>
+
+<view class="commentinput"> 
+        <view class="index-books__input">
+            <input
+            type="text"
+            placeholder="请输入评论，最多100字"
+            value="{{ createcommentValue }}"
+            confirm-type="完成"
+            bindinput="bindcreateComment"
+            maxlength='100'
+             />
+             <button class="commentsubmit" bindtap='createBook' data-recordid='{{detail.recordId}}' data-title='{{detail.title}}'>
+             <image class="kind-list-img2" src="/image/205.png"/>
+             </button>
+        </view>
+
+         
+            <!--view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell weui-cell_input">
+                <input class="weui-input"
+                       type="text"
+                       value="{{ createComment}}"
+                       confirm-type="完成"
+                       bindinput='bindcreateComment'
+                       maxlength="100" 
+                       placeholder="最多输入100字" />
+              </view>
+             </view-->
+</view>

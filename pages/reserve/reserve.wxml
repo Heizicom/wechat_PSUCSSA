@@ -1,0 +1,106 @@
+<!--pages/reserve/reserve.wxml-->
+<import src="../../wxParser/index.wxml"/>
+<import src="/utils/foot.wxml" />
+
+<view class='wrap'>
+  <view class='store'>
+    <image src="/image/logo.png" mode="aspectFill"></image>
+    <view class='info'>
+      <view class='name'>{{detail.title}}</view>
+      
+      <view class='type_km'>
+        <view class='type'>我是一家很好的餐厅</view>
+      </view>
+    </view>
+  </view>
+  <view class='location'>
+    <image src="/image/position.png" mode="aspectFill" class='icon'></image>
+    <view class='info'>{{detail.address}}</view>
+    <image src="/image/arrow_left.png" class='arrow_left'></image>
+  </view>
+  <view class='location phone' bindtap='callPhone'>
+    <image src="/image/phone.png" mode="aspectFill" class='icon'></image>
+    <view class='info'>{{phone}}</view>
+    <image src="/image/arrow_left.png" class='arrow_left'></image>
+  </view>
+  <view class='goods'>
+   <text class="sectext"> 商家推荐菜</text> 
+    <block wx:for="{{temp}}" wx:for-item="good" wx:key="good.id">
+      <view class="good {{index>0? 'border' : ''}}" wx:if="{{seeAllGoods || index < 2}}">
+        <image src="/image/logo.png" mode="aspectFill" class='photo'></image>
+        <view class='info'>
+          <view class='goodsname'>菜名</view>
+          <view class='price'>$15.99
+            <text>$18.99</text>
+          </view>
+        </view>
+
+      </view>
+    </block>
+    <view class='laa' bindtap='goodsmore'>
+      {{btnMsg}}
+      <image src="{{seeAllGoods ? '/image/arrow_up.png' : '/image/arrowdown.png'}}" mode="aspectFill"></image>
+    </view>
+  </view>
+
+  <view style="margin-left: 32px">
+  <text style="display:block; font-size: 18px;font-weight: bold;margin: 32px 0 4px 0;color: #444">立即排队</text>
+  </view>
+
+<view class="index">
+  <view class="index-books">
+    <view class="sectext">
+    <text>姓名</text>
+    </view>
+    <view class="index-books__input">
+      <input
+        type="text"
+        placeholder=""
+        value="{{ createNameValue }}"
+        confirm-type="完成"
+        bindinput="bindCreateNameInput"
+      />
+    </view>
+    <view class="sectext">
+    <text>人数</text>
+    </view>
+    <view class="index-books__input">
+      <input
+        type="text"
+        placeholder=""
+        value="{{ createAddressValue }}"
+        confirm-type="完成"
+        bindinput="bindCreateAddressInput"
+      />
+    </view>
+    <view class="sectext">
+    <text>电话</text>
+    </view>
+    <view class="index-books__input">
+      <input
+        type="text"
+        placeholder=""
+        value="{{ createPhoneValue }}"
+        confirm-type="完成"
+        bindinput="bindCreatePhoneInput"
+      />
+    </view>
+
+    <view class="index-books__controls">
+      <button
+        class="index-books__controls--create"
+        bindtap="createBook"
+        type="primary"
+        disabled='true'
+      >
+        排队取号功能即将开启
+      </button>
+    </view>
+  </view>
+
+</view>
+
+</view>
+<view class='foot'>
+<template is="foot" />
+</view>

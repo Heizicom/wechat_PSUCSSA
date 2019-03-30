@@ -1,0 +1,63 @@
+<!--pages/bbs/bbs.wxml-->
+<!--include src="/utils/search-bar.wxml"/-->
+<import src="/utils/foot.wxml" />
+
+<scroll-view scroll-x="true" class="header">
+  <view class="nav">
+    <view class="{{ bbsType === 'all' ? 'selected' : ''}}" data-type="all" bindtap="loadTab">全部</view>
+    <view class="{{ bbsType === '1' ? 'selected' : ''}}" data-type="1" bindtap="changeTab">二手</view>
+    <view class="{{ bbsType === '2' ? 'selected' : ''}}" data-type="2" bindtap="changeTab">租房</view>
+    <view class="{{ bbsType === '3' ? 'selected' : ''}}" data-type="3" bindtap="changeTab">一起拼</view>
+    <view class="{{ bbsType === '4' ? 'selected' : ''}}" data-type="4" bindtap="changeTab">情感</view>
+    <view class="{{ bbsType === '5' ? 'selected' : ''}}" data-type="5" bindtap="changeTab">其他</view>
+  </view>
+</scroll-view>
+
+<scroll-view scroll-y="true" class="container" upper-threshold="10" lower-threshold="5" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+<navigator class="item" url='/pages/bbscreate/bbscreate' open-type='navigate' hover-class='none'>
+<image class="btn" src='/image/bbs.png'/>
+
+</navigator>
+
+    <block wx:for="{{bbsData}}" wx:key="id">
+        <view class="feed-item">
+          <navigator class="item" url='/pages/bbsDetail/bbsDetail?recordID={{item.id}}' open-type='navigate' hover-class='none'>  
+            <view class="feed-source">
+                <a class="">
+                    <view class="avatar">
+                        <image src="/image/logo.png"></image>
+                    </view>
+                    <!--text>{{item.feed_source_name}}{{item.feed_source_txt}}</text-->
+                </a>
+                <!--image class="item-more" mode="aspectFit" src="/image/205.png"></image-->
+            </view>
+            <view class="feed-content">
+                <view class="question">
+                    <a class="question-link">
+                        <text>{{item.title}}</text>
+                    </a>
+                </view>
+                <view class="answer-body">
+                    
+                        <text class="answer-txt" aid="{{answer_id}}">{{item.content}}</text>
+                </view>  
+                    <view class="answer-actions">
+                        <view class="like dot">
+                            <a>分类： {{category[item.Index]}}  </a>
+                        </view>
+                        <!--view class="comments dot">
+                            <a>{{item.created_at}} </a>
+                        </view>
+                        <!--view class="follow-it">
+                            <a>关注问题</a>
+                        </view-->
+                    </view>
+                
+            </view>
+          </navigator>
+        </view>
+    </block>
+    <view wx:if="{{hasMore}}" class="loadmore loading">正在加载...</view>
+<view wx:else class="loadmore">没有更多的帖子啦 点击右下Logo立刻发帖吧</view>
+</scroll-view>
+

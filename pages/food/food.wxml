@@ -1,0 +1,24 @@
+<!--pages/food/food.wxml-->
+<scroll-view class="list" style="height: 100%; width: 100%;" scroll-y="true"  lower-threshold="800">
+  <block wx:for="{{ iList }}"wx:key="id">
+  <navigator class="item" url='/pages/reserve/reserve?recordID={{item}}' open-type='navigate' hover-class='none'>   
+  <view class='project'>
+      <image class='headimage' src='/image/logo.png'></image>
+      <view class='projecttext'>
+        <text class='biaoti'>{{name[index]}}</text>
+        <text class='jianjie'>我是一家很好吃的餐厅</text>
+        <text class='field'>时间：{{ time[index] }}
+        地点：{{ location[index] }}</text>
+      </view>
+      <!--view class='openpush'></view-->
+   
+  </view>
+   </navigator>
+
+  </block>
+  <view wx:if="{{hasMore}}" class="loadmore loading">正在加载...</view>
+<view wx:else class="loadmore">更多餐厅正在登陆平台中。。</view>
+
+</scroll-view>
+
+

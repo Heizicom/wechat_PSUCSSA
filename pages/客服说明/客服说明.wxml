@@ -1,0 +1,13 @@
+<!--pages/新生手册/客服说明.wxml-->
+<import src="/utils/foot.wxml" />
+
+<view class="slide view_logo">
+    <image class="imagelogo" mode="scaleToFill" src="/image/logo.png" style="background-size:  100% 100%" />
+</view>
+<view class="slide view_section">
+      <text class="block text_atitle" >客服说明</text>
+        <text class="block text_atitle" > --------</text>
+      <text class="block text_aboutus">宾州州立CSSA 善良可爱的的学长学姐（可撩）将会担任CSSA客服并解答大家的问题。由于大家学习生活时间问题，我们无法保证能够在第一时间回复大家的问题。但是我们承诺会在24小时内 回复大家的问题！感谢大家的支持！爱你们，爱PSU，爱CSSA！</text>
+</view>
+<template is="foot" />
+

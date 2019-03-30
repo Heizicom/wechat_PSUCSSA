@@ -1,0 +1,17 @@
+<import src="/utils/foot.wxml" />
+
+<view class="slide page-view">
+<text class="page-title" > </text>
+</view>
+
+<view class="slide page-view">
+<text class="page-title" > 点击下方按钮 跳转至客服界面</text>
+<view><text class="page-title" > CSSA 学长学姐在线答疑</text></view>
+</view>
+
+<view class="slide page-view">
+<contact-button size="100"></contact-button>
+</view>
+
+
+<template is="foot" />

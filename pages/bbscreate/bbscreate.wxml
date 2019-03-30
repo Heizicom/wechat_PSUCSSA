@@ -1,0 +1,105 @@
+<!--pages/bbscreate/bbscreate.wxml-->
+<import src="/utils/foot.wxml" />
+
+<view class="index">
+  <view class="index-profile">
+    <open-data type="userAvatarUrl" class="index-profile__img"></open-data>
+  </view>
+  <view class="index-title">
+    {{ title }}
+  </view>
+  <view class="index-books">
+    <view class="sectext">
+    <text>分类</text>
+    </view>
+    <view class="index-books__input">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{category}}">
+              <view class="picker_input">{{category[index]}}
+              <image class="arrow" src="/image/arrowdown.png"/>
+              </view>
+              
+      </picker>
+      </view>
+    <view class="sectext">
+    <text>标题</text>
+    </view>
+    <view class="index-books__input">
+      <input
+        type="text"
+        placeholder=""
+        value="{{ createtitleValue }}"
+        confirm-type="完成"
+        bindinput="bindCreatetitleInput"
+      />
+    </view>
+    <view class="sectext">
+    <text>帖子内容</text>
+    </view>
+    <view class="index-books__input2">
+      <textarea bindblur="bindCreatecontentInput" 
+        auto-height 
+        placeholder=""
+        value="{{ createcontentValue }}"
+        confirm-type="完成"
+        bindinput="bindCreatecontentInput" />
+    </view>
+
+    <view class="weui-cells">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">
+              <view class="weui-uploader">
+                <view class="weui-uploader__hd">
+                  <view class="sectext">上传图片</view>
+                  <view class="weui-uploader__title"> </view>
+                  <view class="weui-uploader__info">{{imageList.length}}/9</view>
+                </view>
+                <view class="weui-uploader__hd">
+                <view class="sectext">点击可预览选好的图片</view>  
+                </view>
+                <view class="weui-uploader__hd">
+                <view class="sectext">点击加号一次可上传多张图片</view>
+                </view>    
+                <view class="weui-uploader__bd">
+                  <view class="weui-uploader__files">
+                    <block wx:for="{{imageList}}" wx:key="id">
+                      
+                      <view class="weui-uploader__file">
+                        <view  class="image-cell">
+                          <view bindtap="delImg" data-index="{{index}}">
+                            <image class='del-img-btn' src="/image/del-img.png"/>
+                           </view>
+                        <image class="weui-uploader__img" src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+                        </view>
+                      </view> 
+                    </block>
+                  </view>
+                  <view class="weui-uploader__input-box">
+                    <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+    <form bindsubmit='createBook' report-submit>
+
+    <view class="index-books__controls">
+      <button
+        class="index-books__controls--create"
+        
+        type="primary"
+        formType="submit"
+      >
+        发布
+      </button>
+    </view>
+    </form>
+  </view>
+
+  
+
+<template is="foot" />
+
+</view>
+

@@ -1,0 +1,6 @@
+/* pages/客服/客服.wxss */
+.page-title {
+  margin-bottom: 100rpx;
+  font-size: 32rpx;
+}
+.page-view{text-align: center; height: 100px}

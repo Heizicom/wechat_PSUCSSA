@@ -1,0 +1,8 @@
+/* pages/新生手册/新生手册.wxss */
+.view_logo{text-align: center; }
+.imagelogo{width:  80px; height: 80px; }
+.page-view{text-align: center; height: 100px}
+.page-title {
+  margin-bottom: 100rpx;
+  font-size: 32rpx;
+}

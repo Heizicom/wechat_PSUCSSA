@@ -1,0 +1,46 @@
+<!--pages/bbsDetail/bbsDetail.wxml-->
+<import src="/utils/foot.wxml" />
+
+<view class="container">
+    <view>
+  <image src="/image/testback.png" class="back-style" animation="{{animBack}}" bindtap="back"></image>
+  <button class="share" open-type="share">
+  <image src="/image/share.png" class="img-style" animation="{{animTranspond}}" ></image>
+  </button>
+  <navigator class="comment" url="/pages/bbscomment/bbscomment?recordID={{detail.recordId}}">
+  <image src="/image/comment.png" class="img-style" animation="{{animInput}}" ></image>
+  </navigator>
+  <image src="/image/plus.png" class="img-plus-style" animation="{{animPlus}}" bindtap="plus"></image>
+</view>
+
+
+    <view class="question">
+        <text class="question-title">{{detail.title}}</text>
+    </view>
+    <view class="answer-content">
+        <text>
+        {{detail.content}}
+        </text>
+        <image class='answer-content image' wx:for="{{cloudList}}" wx:key="id"src='{{item}}' bindtap='previewImage'/>
+    </view>
+
+    <!--view class="answer-footer comment"> 
+
+         <image class="kind-list-img2" src="/image/205.png"/>
+            <view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell weui-cell_input">
+                <input class="weui-input"
+                       type="text"
+                       value="{{ createComment}}"
+                       confirm-type="完成"
+                       bindinput='bindcreateComment'
+                       maxlength="100" 
+                       placeholder="最多输入100字" />
+        </view>
+      </view>
+    </view-->
+</view>
+
+
+
+<template is="foot" />

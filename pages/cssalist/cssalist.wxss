@@ -1,0 +1,89 @@
+/* pages/cssalist/cssalist.wxss */
+@import "/utils/list/list.wxss";
+.cells {
+  background-color: #fff;
+}
+
+.cells .item {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1rpx solid #eee;
+}
+
+.cells .item image {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 45rpx;
+}
+
+.cells .item .meta {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin:48rpx 48rpx 48rpx 0;
+}
+
+.cells .item .meta .name {
+  color: #234;
+  font-size: 34rpx;
+  margin-bottom: 16rpx;
+}
+
+.cells .item .meta .phone,
+.cells .item .meta .address {
+  color: #678;
+  font-size: 27rpx;
+}
+
+.cells .item .meta .hours {
+  /*color: #ff69b4;*/
+  color: #456;
+  font-size: 27rpx;
+}
+
+.cells .item .score {
+  margin: 20rpx 20rpx 0 -40rpx;
+  padding: 0 10rpx;
+  background-color: #ee523d;
+  border-radius: 30rpx;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.loadmore {
+  color: #888;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.loadmore.loading::before {
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: -10rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+  vertical-align: middle;
+  animation: loading 1s steps(12) infinite;
+  background-size: 100%
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(-360deg)
+  }
+}
+
+.list{
+}
+.m-trip{
+  margin: 20rpx;
+}
+.trip-title{
+  margin-bottom: 10rpx;
+}

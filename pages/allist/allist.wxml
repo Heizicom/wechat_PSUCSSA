@@ -1,0 +1,41 @@
+
+<!--include src="/includes/search-bar.wxml"/-->
+
+<!--view class="cells">
+  <navigator class="item" wx:for="{{iList}}" wx:key="id" url='/pages/baoming/baoming?richTextID={{item}}' open-type='navigate' hover-class='none'>
+    <image src='/image/logo.png' mode="aspectFill"/>
+    <view class="meta">
+      <text class="name">{{name[index]}}</text>
+      <!--text class="phone">名称：{{name[index]}}</text>
+      <text class="address">地点：{{location[index]}}</text>
+      <text class="hours">时间：{{time[index]}}</text>
+    </view>
+  </navigator>
+</view-->
+<view class="allist">
+<scroll-view class="list" style="height: 100%; width: 100%;" scroll-y="true"  lower-threshold="800">
+  <block wx:for="{{ iList }}"wx:key="id">
+    <view class="m-trip">
+  <navigator class="item" url='/pages/baoming/baoming?richTextID={{item}}' open-type='navigate' hover-class='hover-class'>              
+    <image class="cover" src="{{cover[index]}}" mode="aspectFill"></image>
+    <view class="info">
+      <text class="h2">{{name[index]}}</text>
+      <view class="detail">
+        <view><text>时间：{{ time[index] }}</text><!--text>{{ trip.day_count }}天</text><text wx:if="{{ mode === 1 }}">{{ trip.view_count }}次浏览</text--></view>
+        <view class="place">地点：{{ location[index] }}</view>
+      </view>
+      <view class="user">
+        <image class="avatar" src="/image/logo.png"></image>
+        <view class="name">by PSU CSSA</view>
+      </view>
+      <!--view class="bottom" wx:if="{{ mode === 2 }}">{{ trip.view_count }}次浏览 / {{ trip.liked_count }}喜欢 / {{ trip.total_comments_count }}评论</view-->
+    </view>
+    </navigator>
+  </view>
+  </block>
+</scroll-view>
+
+
+<view wx:if="{{hasMore}}" class="loadmore loading">正在加载...</view>
+<view wx:else class="loadmore">暂时没有更多活动啦</view>
+</view>

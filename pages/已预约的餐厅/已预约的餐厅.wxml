@@ -1,0 +1,14 @@
+<import src="/utils/foot.wxml" />
+
+<view class="slide view_logo">
+    <image class="imagelogo" mode="scaleToFill" src="/image/logo.png" style="background-size:  100% 100%" />
+</view>
+<view class="slide view_section">
+         <text class="block text_atitle">敬请期待</text>
+       <text class="block text_atitle" >----------</text>
+</view>
+<view class="slide view_section">
+        <text class="block text_middescrip" >将在新学期推出</text>
+</view>
+
+<template is="foot" />

@@ -1,0 +1,104 @@
+/* pages/question/question.wxss */
+.card-container {
+  width: 640rpx; 
+  height: 928rpx; 
+  background: #fff;
+  /**box-shadow: 0px 15px 50px -8px #DDD;**/
+  box-shadow: 0px 5px 20px -5px #DDD;
+  margin-left: 60rpx;
+  margin-top: 50rpx;
+  /**padding: 0px 20px;**/
+  border-radius: 10px 10px 10px 10px;
+  align-items: center; 
+  display: flex;
+  flex-direction: row;
+  z-index: 9999;
+}
+.m-trip{
+  overflow: hidden;
+  width: 670rpx;
+  display: inline-block;
+  z-index: 9999;
+}
+.m-trip .cover{
+  width: 640rpx;
+  height: 1228rpx;
+  /**vertical-align: bottom;**/
+  border-radius: 10rpx 10rpx 10rpx 10rpx;
+  margin-left: 200rpx;
+  z-index: 1;
+  opacity: 0.3;
+}
+.m-trip::before{
+  content: '';
+  display: block;
+
+  left: 0;
+  top: 0;
+  width: 560rpx;
+  height: 100%;
+  border-top-left-radius: 8rpx;
+  border-bottom-left-radius: 8rpx;
+  background: linear-gradient(to right,rgba(0,0,0,.6) 0,rgba(0,0,0,0) 100%);
+}
+.m-trip .h0{
+  color: #444;
+  padding: 0 30rpx;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  height: 100%;
+  width: 670rpx;
+  z-index: 1;
+  box-sizing: border-box;
+  font-size: 46rpx;
+  font-weight: bolder;
+  line-height: 1.22;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+}
+
+.m-trip .morning{
+  color: #444;
+  padding: 0 30rpx;
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  height: 100%;
+  width: 670rpx;
+  z-index: 1;
+  box-sizing: border-box;
+}
+.m-trip .morning .h00{
+  font-size: 80rpx;
+  font-weight: bolder;
+  line-height: 1.22;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin-top: 30rpx;
+}
+.m-trip .morningDate{
+  margin-top: 10rpx;
+  padding-left: 18rpx;
+  position: relative;
+  font-size: 38rpx;
+  line-height: 1;
+  font-weight: bolder;
+}
+.m-trip .morningDate::before{
+  content: '';
+  width: 10rpx;
+  height: 100%;
+  border-right: 4rpx;
+  background-color: dodgerblue;
+  position: absolute;
+  left: 4rpx;
+  top: 2rpx;
+}

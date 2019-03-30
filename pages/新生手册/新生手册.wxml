@@ -1,0 +1,20 @@
+<import src="/utils/foot.wxml" />
+
+<view class="slide page-view">
+<text class="page-title" > </text>
+</view>
+
+<view class="slide page-view">
+<text class="page-title" > 点击下方Logo 跳转至新生手册小程序</text>
+</view>
+
+<view class="slide page-view">
+<view class="slide view_logo">
+ <navigator target="miniProgram" open-type="navigate" app-id="wx33eac0afa5ac5f5d" path="" extra-data="" version="release">
+    <image class="imagelogo" mode="scaleToFill" src="/image/logo.png" style="background-size:  100% 100%" />
+    </navigator>
+</view>
+</view>
+
+
+<template is="foot" />

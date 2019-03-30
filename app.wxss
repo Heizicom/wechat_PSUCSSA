@@ -1,0 +1,50 @@
+/* 基础样式 */
+@import "/utils/weui.wxss";
+view,scroll-view,swiper,swiper-item,icon,text,progress,button,checkbox-group,checkbox,form,input,label,picker,radio-group,radio,slider,switch,action-sheet,action-sheet-item,action-sheet-cancel,modal,toast,loading,navigator,audio,image,video,map,canvas {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+/**app.wxss**/
+page {
+  box-sizing: border-box;
+  font-size: 30rpx;
+  width: 100%;
+  height: 100%;
+}
+
+view,
+input {
+  box-sizing: border-box;
+}
+.c-full {
+        width: 100%;
+        height: 100%;
+}
+.slide {
+        min-height: 80px;
+}
+.minwidth {
+        min-width: 100px;
+}
+.wx-text_more{font-size: 14px; color: #1AAD19; }
+.wx-swiper{height: 150px; }
+.button1{width: 675rpx; background-color: rgb(255, 255, 255); font-size: 15px; }
+.text_title{margin-right: 100px; font-size: 28px; font-family: "andale mono"; font-weight: 600; margin-bottom: 10px; }
+.text_description{margin-right: 100px; font-size: 13px; color: rgb(153, 153, 153); line-height: 1.2em; margin-bottom: 5px; }
+.view_section{padding: 20px 20px 0px; padding-top: 20px; }
+.text_content{font-size: 15px; color: rgb(51, 51, 51); line-height: 1.5em;}
+.block {
+        display: block;
+}
+
+
+.page-foot{
+  margin: 100rpx 0 30rpx 0;
+  text-align: center;
+  color: #778899;
+  font-size: 3.5mm
+}
+
+

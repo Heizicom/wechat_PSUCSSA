@@ -1,0 +1,17 @@
+<import src="/utils/foot.wxml" />
+
+<view class="slide view_logo">
+    <image class="imagelogo" mode="scaleToFill" src="/image/logo.png" style="background-size:  100% 100%" />
+</view>
+<view class="slide view_section">
+      <text class="block text_atitle" >关于我们</text>
+        <text class="block text_atitle" > --------</text>
+      <text class="block text_aboutus">宾夕法尼亚州立大学中国学生学者联合会（Penn State Chinese Student and Scholars Association），是宾夕法尼亚州立大学中国留学生和学者的联合组织， Penn State CSSA是Penn State University-UP所在城市State College最大的华人团体组织，也是在PSU唯一经中国领事馆认证的组织。</text>
+</view>
+<view class="slide view_section">
+      <text class="block text_atitle">联系我们</text>
+        <text class="block text_atitle" > --------</text>
+        <text class="block text_aboutus" >技术问题：web@psucssa.club</text>
+        <text class="block text_aboutus" >合作意向：prcssapsu@gmail.com</text>
+</view>
+<template is="foot" />

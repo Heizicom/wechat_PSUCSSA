@@ -1,0 +1,22 @@
+<!--pages/buslist/buslist.wxml-->
+<import src="/utils/foot.wxml" />
+
+
+<image class="cataheader" src="/image/catahead.png"></image>
+
+<view class="index-bd">
+    <view class="kind-list-item">
+      
+              <block wx:for-items="{{iList}}" wx:key="id">
+                <navigator url="/pages/content/content?richTextID={{iList[index]}}" class="navigator">
+                <image class="kind-list-img2" src="/image/016.png"></image>
+                  <view class="navigator-text">{{name[index]}}</view>
+                  <view class="navigator-arrow"></view>
+                </navigator>
+              </block>
+    </view>
+  
+
+  <template is="foot" />
+
+</view>

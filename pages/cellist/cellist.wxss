@@ -1,0 +1,27 @@
+@import "/utils/list/list.wxss";
+.list{
+}
+.m-trip{
+  margin: 20rpx;
+}
+.trip-title{
+  margin-bottom: 10rpx;
+}
+.loadmore {
+  color: #888;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.loadmore.loading::before {
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: -10rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+  vertical-align: middle;
+  animation: loading 1s steps(12) infinite;
+  background-size: 100%
+}

@@ -1,0 +1,101 @@
+<!--pages/我的会员卡/我的会员卡.wxml-->
+<view style="margin-top: 10px;margin-left: 32px" bindtap='headbartap'>
+<text style="display:block; font-size: 23px;font-weight: bolder;margin: 10px 0 4px 0;color: #ff7640 ">我的会员卡</text>
+</view>
+
+<view wx:if="{{auth}}">
+<view wx:for="{{bbsData}}" wx:key="id"> 
+  <view class="card-container"> 
+  <!--text class='card-title1' >{{item.Name}}</text-->
+
+    <view class='m-trip'>         
+      <image class="cover" src="/image/logo.png " mode="aspectFill"></image> 
+       <view class='h0'>
+         <text >{{item.Name}}</text>
+        </view>
+        <view class='h1'>
+          <text >{{item.Team}}</text>
+        </view>
+         <view class='h2'>
+           <text >Member of CSSA since {{item.Year}}</text>
+         </view>
+      
+    </view>
+
+   </view>
+   </view>
+
+</view>
+
+<view wx:else>
+<view class='index'>
+  <text class='slogan'>申请CSSA内部成员卡 解锁专属优惠</text>
+  <view class="sectext">
+    <text>部门</text>
+    </view>
+    <view class="index-books__input">
+      <input
+        type="text"
+        placeholder=""
+        value="{{ createTeamValue }}"
+        confirm-type="完成"
+        bindinput="bindCreateTeamInput"
+      />
+    </view>
+
+    <view class="sectext">
+    <text>姓名(First name+Last name)</text>
+    </view>
+    <view class="index-books__input">
+      <input
+        type="text"
+        placeholder=""
+        value="{{ createNameValue }}"
+        confirm-type="完成"
+        bindinput="bindCreateNameInput"
+      />
+    </view>
+
+    <view class="sectext">
+    <text>加入CSSA年份</text>
+    </view>
+    <view class="index-books__input">
+      <input
+        type="text"
+        placeholder=""
+        value="{{ createYearValue }}"
+        confirm-type="完成"
+        bindinput="bindCreateYearInput"
+      />
+    </view>
+    
+    <view class="sectext">
+    <text>内部邀请码</text>
+    </view>
+    <view class="index-books__input">
+      <input
+        type="text"
+        placeholder=""
+        value="{{ createInviteValue }}"
+        confirm-type="完成"
+        bindinput="bindCreateInviteInput"
+      />
+    </view>
+    
+
+    <view class="index-books__controls">
+      <button
+        class="index-books__controls--create"
+        bindtap="createBook"
+        type="primary"
+      >
+        提交
+      </button>
+    </view>
+  </view>
+</view>
+
+
+
+
+

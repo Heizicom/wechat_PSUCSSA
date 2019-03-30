@@ -1,0 +1,109 @@
+/* pages/bbscomment/bbscomment.wxss */
+@import "/utils/weui.wxss";
+
+.container{
+  height: 1500rpx;
+  
+  width: 100%;
+  padding: 0;
+  font-size: 14rpx;
+  
+  color: #000;
+}
+.container .feed-item{
+  width: 100%;
+  padding: 30rpx 30rpx 20rpx;
+  margin: 7rpx 0 6rpx 0;
+  background: #ffffff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 5px #eeeeee;
+}
+.container .feed-item .feed-source{
+  width: 690rpx;
+  left: 0;
+  height: 50rpx;
+}
+.container .feed-item .feed-source .avatar{
+  position: relative;
+  display: inline-block;
+}
+.container .feed-item .feed-source a{
+  display: inline-block;
+  height: 40rpx;
+}
+.container .feed-item .feed-source .avatar image{
+  /*position: absolute;*/
+  display: inline-block;
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 45rpx;
+  top: 10rpx;
+  vertical-align: middle;
+}
+.container .feed-item .feed-source text{
+  /*position: absolute;*/
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  margin: 0 0 0 15rpx;
+  color: #a0acac;
+  font-size: 26rpx;
+}
+.container .feed-item .feed-source .item-more{
+  display: inline-block;
+  width: 40rpx;
+  height: 45rpx;
+  float: right;
+}
+.container .feed-item .feed-content{
+  padding: 10rpx 0 0 0;
+}
+.container .feed-item .feed-content .question text{
+  font-size: 23rpx;
+  line-height: 40rpx;
+  text-space: 5rpx;
+}
+.container .feed-item .feed-content .answer-body{
+  padding: 10rpx 0 0 0;
+  font-size: 28rpx;
+  font-weight: 500;
+  line-height: 28rpx;
+  color: #5b5b5b;
+  max-height: 100rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.title {
+  height: 80rpx;
+  font-size: 40rpx;
+  font-weight: 700;
+  text-align: center;
+}  
+.kind-list-img2 {
+  width: 60rpx;
+  height: 60rpx;
+  position: fixed;
+  bottom: 4%;
+  right: 3%;
+}
+.index-books__input {
+   width: 600rpx;
+   margin-left: 50rpx;
+}
+.index-books__input input {
+  border: 1rpx solid #eee;
+  height: 60rpx;
+  line-height: 50rpx;
+  padding: 5rpx 10rpx;
+}
+.commentinput{
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  border-top: solid 1px #ebebeb;
+  height: 130rpx;
+}

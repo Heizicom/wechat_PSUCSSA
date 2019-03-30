@@ -1,0 +1,16 @@
+<!--pages/question/question.wxml-->
+<!--pages/newgame/game/game.wxml-->
+<view style="margin-top: 10px;margin-left: 32px" bindtap='headbartap'>
+<text style="display:block; font-size: 23px;font-weight: bolder;margin: 10px 0 4px 0;color: #ff7640 ">CSSA 调查问卷</text>
+<text style=" font-size: 17px;font-weight: bold;margin: 2px 0 4px 0;color: #ff7640 ">你好 </text>
+<text style="font-size: 17px;font-weight: bold;margin: 2px 0 4px 0;color: #696969 "> {{userInfo.nickName}}</text>
+</view>
+
+<view class="card-container">   
+  <view class='m-trip'>         
+    <image class="cover" src="/image/logo.png " mode="aspectFill"></image>
+    
+
+   </view>
+  </view>
+

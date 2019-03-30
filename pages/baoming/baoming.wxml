@@ -1,0 +1,25 @@
+<import src="../../wxParser/index.wxml"/>
+<import src="/utils/foot.wxml" />
+
+<view class="top" >
+    <image class="cover" src='{{detail.cover}}' style="background-size:  100% 100%;"/>
+</view>
+<view class="info"  >
+    <text class="block text_title" >{{detail.title}}</text>
+    <text class="block text_description">{{detail.description}}</text>
+<!--navigator class="item" hover-class="navigator-hover" open-type="navigate" url='/pages/content/content?richTextID={{ detail.richTextID }}'-->
+<navigator class="item" hover-class="navigator-hover" open-type="navigate" url='/pages/index/index?richTextID={{detail.richTextID}}'>
+        <button class="button1" hover-class="button-hover" size="default" type="default" disabled='{{detail.disabled}}'>
+        <!--button class="button1" hover-class="button-hover" size="default" type="default" disabled=''-->
+            {{detail.status}}
+        </button>
+    </navigator>
+</view>
+<view class="view_section" >
+    <text class="block text_description" >介绍</text>
+    <template is="wxParser" data="{{wxParserData:richText.nodes}}"/>
+</view>
+
+<view class='foot'>
+<template is="foot" />
+</view>

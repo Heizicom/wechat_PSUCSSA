@@ -1,0 +1,168 @@
+/* pages/已报名的活动/已报名的活动.wxss */
+.loadmore {
+  color: #888;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.loadmore.loading::before {
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: -10rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+  vertical-align: middle;
+  animation: loading 1s steps(12) infinite;
+  background-size: 100%
+}
+
+.list{}
+
+.m-trip{
+  overflow: hidden;
+  position: relative;
+  margin: 20rpx;
+  display:-webkit-inline-box;
+  width: 560rpx; 
+  height: 388rpx; 
+  background: #fff;
+  margin-left: 10%;
+  box-shadow: 0px 5px 20px -5px #DDD;
+  border-radius: 10px 10px 10px 10px;
+}
+.m-trip .cover{
+  width: 470rpx;
+  height: 528rpx;
+  vertical-align: bottom;
+  border-radius: 10rpx 10rpx 10rpx 10rpx;
+  opacity: 0.3;
+  margin-left: 200rpx;
+}
+.m-trip::before{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.m-trip .info{
+  padding: 0 30rpx;
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  box-sizing: border-box;
+}
+.m-trip .info .h2{
+  color: #444;
+  font-size: 46rpx;
+  font-weight: 200;
+  line-height: 1.22;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin-top: 30rpx;
+}
+.m-trip .info .h3{
+  color: #444;
+  font-size: 30rpx;
+  font-weight: 200;
+  line-height: 1.22;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin-top: 30rpx;
+}
+
+.m-trip .user{
+  position: absolute;
+  width: 100%;
+  left: 30rpx;
+  bottom: 30rpx;
+  line-height: 50rpx;
+  font-size: 22rpx;
+}
+.m-trip .avatar{
+  width: 50rpx;
+  height: 50rpx;
+  float: left;
+  margin-right: 15rpx;
+  border-radius: 50rpx;
+  vertical-align: bottom;
+}
+.m-trip .bottom{
+  position: absolute;
+  bottom: 24rpx;
+  font-size: 20rpx;
+}
+
+.m-trip-s{
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8rpx;
+  margin-bottom: 20rpx;
+}
+.m-trip-s .mask{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 222rpx;
+  height: 240rpx;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0));
+  border-top-left-radius: 8rpx;
+  border-bottom-left-radius: 8rpx;
+}
+.m-trip-s .cover{
+  width: 100%;
+  height: 240rpx;
+  vertical-align: bottom;
+  background-position: center center;
+}
+.m-trip-s .info{
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 20rpx 28rpx;
+  text-shadow: 2rpx 3rpx rgba(0, 0, 0, .2);
+}
+.m-trip-s .title{
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-left: -4rpx;
+  line-height: 50rpx;
+}
+.m-trip-s .detail{
+  font-size: 20rpx;
+  position: relative;
+  height: 16rpx;
+  line-height: 16rpx;
+  padding-left: 16rpx;
+  margin-top: 4rpx;
+}
+.m-trip-s .detail::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6rpx;
+  height: 16rpx;
+  background-color: #4abdcc;
+}
+.m-trip-s .detail view{
+  display: inline-block;
+  margin-right: 16rpx;
+}
+.m-trip-s .detail text{
+  font-weight: bold;
+}
+
